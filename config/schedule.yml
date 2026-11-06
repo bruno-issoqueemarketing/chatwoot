@@ -92,3 +92,9 @@ remove_orphan_conversations_job:
   cron: '0 */12 * * *'
   class: 'Internal::RemoveOrphanConversationsJob'
   queue: housekeeping
+
+# [custom] every 5 minutes: merge WhatsApp LID contacts into the real phone contact
+smartlub_lid_contact_reconcile_job:
+  cron: '*/5 * * * *'
+  class: 'Smartlub::LidContactReconcileJob'
+  queue: scheduled_jobs

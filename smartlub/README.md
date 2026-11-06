@@ -25,3 +25,4 @@ smartlub/rollback.sh <id> --restore-db  # também restaura o banco (perde dados 
 | # | Descrição |
 |---|-----------|
 | c1 | Nome da instalação "Smartlub Chat" (banco + textos da interface) |
+| c2 | Job a cada 5 min que mescla contatos WhatsApp criados com LID no contato do telefone real (requer `EVOLUTION_DATABASE_URL` no `.env`) |
