@@ -11,6 +11,7 @@ import FloatingVue from 'floating-vue';
 import WootUiKit from 'dashboard/components';
 import App from 'dashboard/App.vue';
 import i18nMessages from 'dashboard/i18n';
+import { brandedMessages } from 'dashboard/i18n/branding';
 import createAxios from 'dashboard/helper/APIHelper';
 
 import commonHelpers, { isJSONValid } from 'dashboard/helper/commons';
@@ -37,7 +38,7 @@ import '@chatwoot/viz/style.css';
 const i18n = createI18n({
   legacy: false, // https://github.com/intlify/vue-i18n/issues/1902
   locale: 'en',
-  messages: i18nMessages,
+  messages: brandedMessages(i18nMessages),
 });
 
 sync(store, router);
